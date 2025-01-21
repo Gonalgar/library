@@ -55,6 +55,8 @@ function updateView() {
             myLibrary[index].read = !myLibrary[index].read;
             updateView();
         });
+        let btntitle = book.read? "Mark as unread" : "Mark as read";
+        read.setAttribute("title", btntitle);
         read.appendChild(readIcon);
         buttons.appendChild(read);
 
@@ -63,6 +65,7 @@ function updateView() {
 
         const deletebtn = document.createElement("button");
         deletebtn.appendChild(deleteIcon);
+        deletebtn.setAttribute("title", "Delete Book");
         deletebtn.addEventListener("click", () => {
             myLibrary.splice(index, 1);
             updateView();
