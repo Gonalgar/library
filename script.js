@@ -41,26 +41,40 @@ function updateView() {
         card.appendChild(author);
 
         const pages = document.createElement("p")
-        pages.textContent = book.pages;
+        pages.textContent = book.pages + " pages";
         card.appendChild(pages);
 
-        const read = document.createElement("input");
-        read.type = "checkbox";
-        read.checked = book.read;
-        card.appendChild(read);
+        const readIcon = document.createElement("img");
+        readIcon.src = book.read ? "icons/bookmark.svg" : "icons/bookmark-outline.svg";
+
+        const buttons = document.createElement("div");
+        buttons.classList.add("buttons");
+
+        const read = document.createElement("button");
+        read.addEventListener("click", () => {
+            myLibrary[index].read = !myLibrary[index].read;
+            updateView();
+        });
+        read.appendChild(readIcon);
+        buttons.appendChild(read);
+
+        const deleteIcon = document.createElement("img");
+        deleteIcon.src = "icons/delete-outline.svg";
 
         const deletebtn = document.createElement("button");
-        deletebtn.textContent = "Delete";
+        deletebtn.appendChild(deleteIcon);
         deletebtn.addEventListener("click", () => {
             myLibrary.splice(index, 1);
             updateView();
         });
-
+        buttons.appendChild(deletebtn);
+    
+        card.appendChild(buttons);
         booklist.appendChild(card);
     });
 }
 
-// addBookToLibrary("J.K. Rowling", "Harry Potter and the Philosopher's Stone", 223, true);
+addBookToLibrary("J.K. Rowling", "Harry Potter and the Philosopher's Stone", 223, true);
 
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector(".add-book-btn");
