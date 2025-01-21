@@ -98,3 +98,60 @@ button img {
     width: 30px;
     height: 30px;
 }
+
+dialog[open] {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.add-book {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 10px 0;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    gap: 15px;
+
+    p {
+        margin: 5px;
+    }
+}
+
+input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #3b6041;
+}
+
+input::selection {
+    background-color: #3b6041;
+    color: white;
+}
+
+.checkbox{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.checkbox:checked {
+    background-color: #3b6041;
+    border-color: #3b6041;
+}
