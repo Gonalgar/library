@@ -28,7 +28,7 @@ To view or modify the project locally:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/library.git
+   git clone https://github.com/gonalgar/library.git
 2. Navigate to the project directory:
     ```bash
     cd library
