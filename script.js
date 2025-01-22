@@ -99,6 +99,11 @@ document.getElementById("add-book-form").addEventListener("submit", function(eve
 });
 
 addBookToLibrary("J.K. Rowling", "Harry Potter and the Philosopher's Stone", 223, true);
+addBookToLibrary("J.R.R. Tolkien", "The Hobbit", 310, false);
+addBookToLibrary("George Orwell", "1984", 328, true);
+addBookToLibrary("Harper Lee", "To Kill a Mockingbird", 281, false);
+addBookToLibrary("J.D. Salinger", "The Catcher in the Rye", 277, true);
+addBookToLibrary("F. Scott Fitzgerald", "The Great Gatsby", 218, false);
 
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector(".add-book-btn");
