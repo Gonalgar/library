@@ -32,17 +32,17 @@
                 <form id="add-book-form">
                     <div class="field">
                         <p>Name</p>
-                        <input type="text" name="name" pattern=".{1,}" placeholder="Book Name">
+                        <input type="text" name="name" pattern=".{1,}" placeholder="Book Name" required>
                     </div>
 
                     <div class="field">
                         <p>Author</p>
-                        <input type="text" name="author" pattern=".{1,}" placeholder="Author">
+                        <input type="text" name="author" pattern=".{1,}" placeholder="Author" required>
                     </div>
 
                     <div class="field">
                         <p>Pages</p>
-                        <input type="number" name="pages" pattern="\d+" placeholder="Number of pages">
+                        <input type="number" name="pages" pattern="\d+" placeholder="Number of pages" min="1" required>
                     </div>
 
                     <div class="field">

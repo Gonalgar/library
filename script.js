@@ -80,6 +80,24 @@ function updateView() {
     });
 }
 
+document.getElementById("add-book-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = this.elements["name"].value.trim();
+    const author = this.elements["author"].value.trim();
+    const pages = this.elements["pages"].value.trim();
+    const read = this.elements["read"].checked;
+
+    if (!name || !author || !pages || isNaN(pages) || pages <= 0) {
+        return;
+    }
+
+    addBookToLibrary(author, name, parseInt(pages), read);
+    updateView();
+    dialog.close();
+    this.reset();
+});
+
 addBookToLibrary("J.K. Rowling", "Harry Potter and the Philosopher's Stone", 223, true);
 
 const dialog = document.querySelector("dialog");
