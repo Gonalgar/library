@@ -155,3 +155,10 @@ input::selection {
     background-color: #3b6041;
     border-color: #3b6041;
 }
+
+.empty-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}

@@ -17,12 +17,15 @@ function updateView() {
     booklist.innerHTML = "";
 
     if (myLibrary.length === 0) {
+        const empty_div = document.createElement("div");
+        empty_div.classList.add("empty-comment");
         const empty_title = document.createElement("h3");
         empty_title.textContent = "Empty";
         const empty_comment = document.createElement("p");
         empty_comment.textContent = "You haven't added any books yet";
-        booklist.appendChild(empty_title);
-        booklist.appendChild(empty_comment);
+        empty_div.appendChild(empty_title);
+        empty_div.appendChild(empty_comment);
+        booklist.appendChild(empty_div);
 
         return;
     }
